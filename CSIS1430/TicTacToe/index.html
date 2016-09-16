@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Tic Tac Toe</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="TTTCSS.css">
+        <script src="TTTJS.js"></script>
+
+    </head>
+    <body onload="start()">
+    <center>
+        <div class="title">
+            <h1>Tic-Tac-Toe</h1>
+        </div>
+        
+        <div>
+            <h2 id="player"></h2>
+            <h2 id="winner"></h2>
+        </div>
+        
+        <div class="table">
+            <div class="row">
+                <div class="cell" onclick="playerMoved(this, 1)"></div>
+                <div class="cell" onclick="playerMoved(this, 2)"></div>
+                <div class="cell" onclick="playerMoved(this, 4)"></div>
+            </div>
+            <div class="row">
+                <div class="cell" onclick="playerMoved(this, 8)"></div>
+                <div class="cell" onclick="playerMoved(this, 16)"></div>
+                <div class="cell" onclick="playerMoved(this, 32)"></div>
+            </div>
+            <div class="row">
+                <div class="cell" onclick="playerMoved(this, 64)"></div>
+                <div class="cell" onclick="playerMoved(this, 128)"></div>
+                <div class="cell" onclick="playerMoved(this, 256)"></div>
+            </div>            
+        </div>
+        
+        <div class="buttons">
+            <input type="submit" class="reset" value="reset" onclick="startNewGame()">New Game
+        </div>
+    </center>
+</body>
+</html>

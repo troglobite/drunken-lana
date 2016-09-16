@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 20, 2016, 11:30:49 AM
+    Author     : dotawesomo
+*/
+
+body {
+    vertical-align: middle;
+    background-color: blanchedalmond;
+}
+.title {
+    margin-top: 5%;
+    border-width: 10px;
+    
+}
+.table {
+    display: table;
+    margin-top: 5%;
+}
+.row {
+    display: table-row;
+}  
+
+.cell {
+    display: table-cell;
+    border: solid;
+    border-width: thin;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: darkgreen;
+}
+.reset{
+    margin: 2%;
+}
+.buttons {
+    border-width: 5px;
+}
+.dec{
+    
+}
