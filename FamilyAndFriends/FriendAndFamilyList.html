@@ -1,0 +1,84 @@
+
+<html>
+    <head>
+        <title>Friends and Family</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <input id="name" type="text" onkeyup="filter()">
+            <select id="options" onchange="filter()">
+            </select>
+        </div>
+        <div id="table"></div>
+
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script>
+                var people = [];
+
+                $.ajax({
+                    dataType: "json",
+                    url: "/csis2470/FriendsAndFamily.json"
+                })
+                        .done(function (obj) {
+                            people = obj.people;
+                            document.getElementById("table").innerHTML = makeTable(obj.people);
+                            document.getElementById("options").innerHTML = makeOptions(obj.people);
+                        })
+                        .fail(function () {
+                            document.getElementById("table").innerHTML = "<img src='fail.jpg'>"
+                        })
+
+                function makeRow(person) {
+                    var name = "<td>" + person.name + " " + person.lname + "</td>";
+                    var relation = "<td>" + person.relation + "</td>";
+                    return "<tr>" + name + relation + "</tr>";
+                }
+
+                function makeTable(people) {
+                    var table = "<table><tr><th>Name</th><th>Relationship</th><tr>";
+
+                    for (var i = 0; i < people.length; i++) {
+                        table += makeRow(people[i]);
+                    }
+
+                    return table + "</table>";
+                }
+
+                function makeOptions(people) {
+                    var options = [];
+                    var html = "<option value=''>-Select Relationship-</option>";
+                    for (var i = 0; i < people.length; i++) {
+                        if (options.indexOf(people[i].relation) == -1) {
+                            options.push(people[i].relation);
+                        }
+                    }
+                    for (var i = 0; i < options.length; i++) {
+                        html += "<option>" + options[i] + "</option>";
+                    }
+                    return html;
+                }
+
+                function filter() {
+                    var name = document.getElementById("name").value;
+                    var relation = document.getElementById("options").value;
+                    var filteredPeople = [];
+
+                    for (var i = 0; i < people.length; i++) {
+                        var person = people[i];
+                        var matchesRelation = !relation || person.relation == relation;
+                        var matchesFname = person.name.toUpperCase().startsWith(name.toUpperCase());
+                        var matchesLname = person.lname.toUpperCase().startsWith(name.toUpperCase());
+
+                        if (matchesRelation && (matchesFname || matchesLname)) {
+                            filteredPeople.push(person);
+                        }                        
+                    }
+
+                    document.getElementById("table").innerHTML = makeTable(filteredPeople);
+                }
+
+        </script>
+    </body>
+</html>
