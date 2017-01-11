@@ -1,0 +1,164 @@
+/* 
+    Created on : Feb 16, 2016, 5:59:41 PM
+    Author     : dotawesomo
+*/
+body {
+    background-color: aliceblue;
+    color: black;
+    margin-top: 30px;
+}
+
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+}
+
+.carousel-indicators li {
+    border-color: #f4511e;
+}
+
+.carousel-indicators li.active {
+    background-color: #f4511e;
+}
+
+button {
+    postion: relative;
+    top: 100px;
+    left: 1500px;
+    display: inline-block;
+    margin: 0 10px 0 0;
+    padding: 5px 5px;
+    font-size: 33px;
+    font-family: "Bitter",serif;
+    line-height: 1.8;
+    appearance: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.img-circle
+{
+    margin: 10px;
+}
+.navbar{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+    background-color: orangered;
+}
+
+.navbar-nav li a:hover {
+    color: #1abc9c !important;
+}
+
+.bg-4{
+    background-color: #999966;
+}
+
+.bg-3
+{
+    background-color: #ff944d;
+}
+
+.bg-2
+{
+    margin: 0;
+    background-color: darkolivegreen;
+    color: black;
+    padding-top: 70px;
+}
+.bg-5
+{
+    background-color: #80ffaa;
+}
+.item
+{    
+    background-color: #8080ff;
+    padding-bottom: 150px;
+    padding-top: 25px;
+    color: black;
+}
+.panel-heading
+{
+    background-color: orangered;
+}
+.nav
+{
+    color: black;
+    margin-bottom: 0;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity:0.9;
+    background-color: orange;
+}
+.navbar-brand
+{
+    background-color: orange;
+}
+.bg-1
+{
+    background-color: #669999;
+}
+button:focus {
+    outline: none
+}
+
+div.backing {
+    position:relative;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+div.button {
+    position: relative;
+    top: 200px;   
+}
+
+header {
+    color:#6496c8
+}
+
+ol {
+    color:#6496c8
+}
+
+table   {
+    color:#6496c8;
+    border-color: #6496c8;
+    background-color: whitesmoke; 
+    border:"7"; 
+    width:0%;
+    length:0%;
+} 
+
+h1, h2, h3, h4  {
+    color:#6496c8;
+}
+
+section.flat button {
+    color: #6496c8;
+    background-color: rgba(0,0,0,0);
+    text-shadow: -1px 1px #417cb8;
+    border: solid 5px #6496c8;
+    border-radius: 60px 60px 60px 60px;
+}
+
+section.flat button:hover,
+section.flat button.hover {
+    background-color: #346392;
+    text-shadow: -1px 1px #27496d;
+}
+
+section.flat button:active,
+section.flat button.active {
+    background-color: #27496d;
+    text-shadow: -1px 1px #193047;
+}
+
+title {
+    padding-bottom: 20px;
+}
